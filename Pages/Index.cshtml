@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container justify-content-sm-center">
+    <!--Creating Jumbotron inside container-->
+    <div class="jumbotron" style="margin-top: -2rem; margin-left:-15rem; margin-right: -15rem;
+        padding: 9.2rem; padding-left: 1rem; padding-right: 1rem;  background-image: url(img/thumbinal.jpg)">
+
+    </div>
+</div>
+
+
+
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+               
+                    @foreach (var item in Model.GetRandomProduct)
+                    {
+                        <img src="~/img/@item.ImgUrl" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">@item.Name</h3>
+                            <h5 class="card-title">Unit: @item.ProductType</h5>
+                            <h5 class="card-title">Type: @item.GetType().Name</h5>
+                            <p class="card-text">@item.Details</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Details link</small>
+                        </div>
+                    }
+
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+

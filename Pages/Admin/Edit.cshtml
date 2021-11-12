@@ -1,0 +1,77 @@
+﻿@page 
+@model WebbshoppenSS.Pages.Admin.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h5>You are editing Product of ID: @Model.ProdID</h5>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+
+            <div class="form-check">
+                <label for="validationDefault01" class="form-label">New product name</label>
+                <input type="text" asp-for="@Model.ProductName" class="form-control" id="validationDefault01" value="" required>
+            </div>
+
+            <br />
+            <div class="mb-3">
+                <select asp-for="@Model.Category" class="form-select" required aria-label="Select category of product">
+                    <option value="">Open this select menu</option>
+                    <option value="ProductLight">Ancient units</option>
+                    <option value="ProductMedium">Modern units</option>
+                    <option value="ProductHeavy">Future units</option>
+                </select>
+                <div class="invalid-feedback">You have to choose category of the product.</div>
+            </div>
+
+            <br />
+            <div class="mb-3">
+                <select asp-for="@Model.UnitCategory" class="form-select" required aria-label="Select category of selected product category">
+                    <option value="">Open this select menu</option>
+                    <option value="1">Vehicle</option>
+                    <option value="0">Infantry</option>
+
+                </select>
+                <div class="invalid-feedback">You have to choose category of the product.</div>
+            </div>
+
+            <div class="form-check mb-3">
+                <label for="validationDefault01" class="form-label">Desired stock amount</label>
+                <input asp-for="@Model.ProductQuanity" type="number" class="form-control" id="validationDefault01" value="" required>
+            </div>
+
+            <div class="form-check mb-3">
+                <label for="validationDefault01" class="form-label">Price</label>
+                <input asp-for="@Model.ProductPrice" type="number" class="form-control" id="validationDefault01" value="" required>
+            </div>
+
+
+            <div class="form-check mb-3">
+                <label for="validationTextarea" class="form-label">Detail Area</label>
+                <textarea asp-for="@Model.ProductDetails" class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                <div class="invalid-feedback">
+                    Please enter product details in the Detail Area.
+                </div>
+            </div>
+
+            <div class="mb-auto">
+                <label for="validationTextarea" class="form-label">Picture name with extension t.ex (Picture.jpg)</label>
+                <input asp-for="@Model.ProductImage" type="text" class="form-control" aria-label="file example" required>
+                <div class="invalid-feedback">Example invalid form file feedback</div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Admin/Manager">Back to Manager</a>
+</div>
