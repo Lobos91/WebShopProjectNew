@@ -850,3 +850,4 @@ C:\Users\sebas\Documents\GitHub\WebShopProject\obj\Debug\netcoreapp3.1\Webbshopp
 C:\Users\sebas\Documents\GitHub\WebShopProject\obj\Debug\netcoreapp3.1\WebbshoppenSS.pdb
 C:\Users\sebas\Documents\GitHub\WebShopProject\obj\Debug\netcoreapp3.1\WebbshoppenSS.genruntimeconfig.cache
 C:\Users\sebas\Documents\GitHub\WebShopProject\obj\Debug\netcoreapp3.1\WebbshoppenSS.csproj.CopyComplete
+C:\Users\sebas\Documents\GitHub\WebShopProject\obj\Debug\netcoreapp3.1\Razor\Pages\ProductCategories\OldProducts.cshtml.g.cs

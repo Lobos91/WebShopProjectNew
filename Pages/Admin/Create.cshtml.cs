@@ -32,14 +32,15 @@ namespace WebbshoppenSS.Pages.Admin
             if (Category == "ProductLight")
             {
                Data.ProductLight.ProductsLight.Add(new MiddleAge 
-                        {
+                {
                             ProductID = ProdID,
                             Name = ProductName, 
                             Price = ProductPrice , 
                             Quanity = ProductQuanity,
                             ImgUrl = "/img/" + ProductImage, 
                             Details = ProductDetails,
-                            ProductType = UnitCategory
+                            ProductType = UnitCategory,
+                            ProductCategory = new List<string>() { "Old units" },
 
                });
 
@@ -54,7 +55,8 @@ namespace WebbshoppenSS.Pages.Admin
                     Quanity = ProductQuanity,
                     ImgUrl = "/img/" + ProductImage,
                     Details = ProductDetails,
-                    ProductType = UnitCategory
+                    ProductType = UnitCategory,
+                    ProductCategory = new List<string>() { "Modern units" },
                 });
 
             }
@@ -68,7 +70,8 @@ namespace WebbshoppenSS.Pages.Admin
                     Quanity = ProductQuanity,
                     ImgUrl = "/img/" + ProductImage,
                     Details = ProductDetails,
-                    ProductType = UnitCategory
+                    ProductType = UnitCategory,
+                    ProductCategory = new List<string>() { "Future units" },
                 });
 
             }

@@ -12,8 +12,8 @@ namespace WebbshoppenSS.Pages.Admin
     public class EditModel : PageModel
     {
         public int ProdID { get; set; }
-        public List<Army> Products { get; set; }
-        public List<Army> Product { get; set; }
+        public List<Product> Products { get; set; }
+        public List<Product> SelectedProduct { get; set; }
 
         public string Category { get; set; }
         public ProductType UnitCategory { get; set; }
@@ -26,13 +26,13 @@ namespace WebbshoppenSS.Pages.Admin
         public void OnGet(int Id)
         {
             Products = Data.AllProducts.GetAllProducts();
-            Product = Products.Where(prodID => prodID.ProductID == Id).ToList();
+            SelectedProduct = Products.Where(prodID => prodID.ProductID == Id).ToList();
             ProdID = Id;
         }
 
         public void OnPost()
         {
-            Army product = Product.Where(x => x.ProductID == ProdID).FirstOrDefault();
+            Product product = SelectedProduct.Where(x => x.ProductID == ProdID).FirstOrDefault();
 
             if (Category == "ProductLight")
             {

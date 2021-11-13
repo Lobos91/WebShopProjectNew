@@ -10,8 +10,8 @@ namespace WebbshoppenSS.Pages.Admin
 {
     public class ManagerModel : PageModel
     {
-        public List<Army> GetAllProducts { get; set; }
-        public List<Army> Result { get; set; }
+        public List<Product> GetAllProducts { get; set; }
+        public List<Product> Result { get; set; }
 
         public void OnGet()
         {

@@ -15,75 +15,81 @@ namespace WebbshoppenSS.Data
             if (ProductsHeavy == null || !ProductsHeavy.Any()) //if list Charasters is empty
             {
                 ProductsHeavy = new List<FutureAge>()
-            {
-                new FutureAge()
                 {
-                    ProductID = 13,
-                    Name = "Future soldier",
-                    Price = 3500,
-                    ImgUrl ="SoldierHeavy1.jpg",
-                    ProductType = ProductType.Infantry,
-                    Quanity = 1000,
-                    Details = "Light armored begginer level infantry soldier.\\" +
-                    "Can be usefull as a support for heavier units becouse of its speed.",
-                },
-                new FutureAge()
-                {
-                    ProductID = 14,
-                    Name = "Elite future warrior",
-                    Price = 5000,
-                    ImgUrl ="SoldierHeavy2.jpg",
-                    ProductType = ProductType.Infantry,
-                    Quanity = 1000,
-                    Details = "Light armored begginer level infantry soldier.\\" +
-                    "Can be usefull as a support for heavier units becouse of its speed.",
-                },
-                  new FutureAge()
-                {
-                    ProductID = 15,
-                    Name = "Elite bio-robot",
-                    Price = 8000,
-                    ImgUrl ="SoldierHeavy3.jpg",
-                    ProductType = ProductType.Infantry,
-                    Quanity = 1000,
-                    Details = "Light armored begginer level infantry soldier.\\" +
-                    "Can be usefull as a support for heavier units becouse of its speed.",
-                },
-               new FutureAge()
-                {
-                    ProductID = 16,
-                    Name = "AFU-200",
-                    Price = 15000,
-                    ImgUrl ="VehicleHeavy1.jpg",
-                    ProductType = ProductType.Vehilce,
-                    Quanity = 20000,
-                    Details = "Light armored begginer level infantry soldier.\\" +
-                    "Can be usefull as a support for heavier units becouse of its speed.",
-                },
-                new FutureAge()
-                {
-                    ProductID = 17,
-                    Name = "AFU-200",
-                    Price = 30000,
-                    ImgUrl ="VehicleHeavy2.jpg",
-                    ProductType = ProductType.Vehilce,
-                    Quanity = 1000,
-                    Details = "Light armored begginer level infantry soldier.\\" +
-                    "Can be usefull as a support for heavier units becouse of its speed.",
-                },
-                  new FutureAge()
-                {
-                    ProductID = 18,
-                    Name = "AFU-200",
-                    Price = 50000,
-                    ImgUrl ="VehicleHeavy3.jpg",
-                    ProductType = ProductType.Vehilce,
-                    Quanity = 1000,
-                    Details = "Light armored begginer level infantry soldier.\\" +
-                    "Can be usefull as a support for heavier units becouse of its speed.",
-                },
+                    new FutureAge()
+                    {
+                        ProductID = 13,
+                        Name = "Future soldier",
+                        Price = 3500,
+                        ImgUrl ="SoldierHeavy1.jpg",
+                        ProductType = ProductType.Infantry,
+                        Quanity = 1000,
+                        Details = "Light armored begginer level infantry soldier.\\" +
+                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        ProductCategory = new List<string>(){ "Future units"},
+                    },
+                    new FutureAge()
+                    {
+                        ProductID = 14,
+                        Name = "Elite future warrior",
+                        Price = 5000,
+                        ImgUrl ="SoldierHeavy2.jpg",
+                        ProductType = ProductType.Infantry,
+                        Quanity = 1000,
+                        Details = "Light armored begginer level infantry soldier.\\" +
+                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        ProductCategory = new List<string>(){ "Future units"},
+                    },
+                      new FutureAge()
+                    {
+                        ProductID = 15,
+                        Name = "Elite bio-robot",
+                        Price = 8000,
+                        ImgUrl ="SoldierHeavy3.jpg",
+                        ProductType = ProductType.Infantry,
+                        Quanity = 1000,
+                        Details = "Light armored begginer level infantry soldier.\\" +
+                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        ProductCategory = new List<string>(){ "Future units"},
+                    },
+                   new FutureAge()
+                    {
+                        ProductID = 16,
+                        Name = "AFU-200",
+                        Price = 15000,
+                        ImgUrl ="VehicleHeavy1.jpg",
+                        ProductType = ProductType.Vehilce,
+                        Quanity = 20000,
+                        Details = "Light armored begginer level infantry soldier.\\" +
+                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        ProductCategory = new List<string>(){ "Future units"},
+                    },
+                    new FutureAge()
+                    {
+                        ProductID = 17,
+                        Name = "AFU-200",
+                        Price = 30000,
+                        ImgUrl ="VehicleHeavy2.jpg",
+                        ProductType = ProductType.Vehilce,
+                        Quanity = 1000,
+                        Details = "Light armored begginer level infantry soldier.\\" +
+                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        ProductCategory = new List<string>(){ "Future units"},
+                    },
+                      new FutureAge()
+                    {
+                        ProductID = 18,
+                        Name = "AFU-200",
+                        Price = 50000,
+                        ImgUrl ="VehicleHeavy3.jpg",
+                        ProductType = ProductType.Vehilce,
+                        Quanity = 1000,
+                        Details = "Light armored begginer level infantry soldier.\\" +
+                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        ProductCategory = new List<string>(){ "Future units"},
+                    },
 
-            };
+                };
             }
             return ProductsHeavy;
 

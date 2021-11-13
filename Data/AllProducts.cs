@@ -8,15 +8,15 @@ namespace WebbshoppenSS.Data
 {
     public static class AllProducts
     {
-        public static List<Army> Products { get; set; }
+        public static List<Product> Products { get; set; }
         
         public static IEnumerable<MiddleAge> ProductsLight { get; private set; }
         public static IEnumerable<NowAge> ProductsMedium { get; private set; }
         public static IEnumerable<FutureAge> ProductsHeavy { get; private set; }
 
-        public static List<Army> GetAllProducts()
+        public static List<Product> GetAllProducts()
         {
-            Products = new List<Army>();
+            Products = new List<Product>();
 
             ProductsLight = ProductLight.GetProductsLight();
             ProductsMedium = ProductMedium.GetProductsMedium();

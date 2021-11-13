@@ -29,7 +29,10 @@
         <div class="card-body">
             <h3 class="card-title">@item.Name</h3>
             <h5 class="card-title">Unit: @item.ProductType</h5>
-            <h5 class="card-title">Type: @item.GetType().Name</h5>
+            @foreach (var category in item.ProductCategory)
+            {
+                <h5 class="card-title">Type: @category</h5>
+            }
             <h5 class="card-text"> Price: @item.Price&euro; (SEK: @(item.Price * 9.5))</h5>
             <p class="card-text">In Stock: @item.Quanity</p>
         </div>

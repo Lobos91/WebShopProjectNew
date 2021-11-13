@@ -22,12 +22,16 @@
             {
         <tbody>
             <tr>
+
                 <th scope="row">@item.ProductID <img src="~/img/@item.ImgUrl" width="40" height="40" />  </th>
                 <td>@item.Name</td>
                 <td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
                 <td>@item.ProductType</td>
                 <td>@item.Quanity</td>
-                <td>@item.GetType().Name</td>
+                @foreach (var category in item.ProductCategory)
+                {
+                    <td class="card-title">Type: @category</td>
+                }
 
                 <td>
                     <a asp-page="/Admin/Edit" asp-route-Id="@item.ProductID">Edit</a>  || Delete

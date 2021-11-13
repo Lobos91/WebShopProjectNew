@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebbshoppenSS.Models
 {
-    public class Army
+    public class Product
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
@@ -15,24 +15,23 @@ namespace WebbshoppenSS.Models
         public string Details { get; set; }
         public string ImgUrl { get; set; }
         public ProductType ProductType { get; set; }
-        
-        
+        public List<string> ProductCategory { get; set; }
+
 
     }
     
-    public class MiddleAge : Army
+    public class MiddleAge : Product
     {
-
+        
     }
 
-    public class NowAge : Army
+    public class NowAge : Product
     {
-
     }
 
-    public class FutureAge : Army
-    {
 
+    public class FutureAge : Product
+    {
 
     }
 }
