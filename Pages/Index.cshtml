@@ -13,32 +13,41 @@
 </div>
 
 
+<h1 class="text-center">Welcome in shop</h1>
+<br />
+
+<div class="row">
 
 
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-               
-                    @foreach (var item in Model.GetRandomProduct)
-                    {
-                        <img src="~/img/@item.ImgUrl" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="card-title">@item.Name</h3>
-                            <h5 class="card-title">Unit: @item.ProductType</h5>
-                            <h5 class="card-title">Type: @item.GetType().Name</h5>
-                            <p class="card-text">@item.Details</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Details link</small>
-                        </div>
-                    }
-
-                
-            </div>
-
+            @foreach (var item in Model.Get3Product)
+            {
+    <div class="card" style="width:20em; margin:10px;">
+        <a asp-page="">
+            <img src="~/img/@item.ImgUrl" class="card-img-top" style="width:20rem; height:30rem;">
+        </a>
+       
+        <div class="card-body">
+            <h3 class="card-title">@item.Name</h3>
+            <h5 class="card-title">Unit: @item.ProductType</h5>
+            <h5 class="card-title">Type: @item.GetType().Name</h5>
+            <h5 class="card-text"> Price: @item.Price&euro; (SEK: @(item.Price * 9.5))</h5>
+            <p class="card-text">In Stock: @item.Quanity</p>
         </div>
+        <div class="card-footer">
+           
+            <small>
+                <a class="btn btn-info" asp-page="">Details</a>
+                <a class="btn btn-success" asp-page="">Add to Card</a>
+            </small>
+        </div>
+        <div class="card"></div>
+        </div>
+        }
     </div>
+
+
+
+
 
 
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zUz62VFZ9VtFAooi6Wxh3KEo12QYk1XmYEadwqERfkF+hf/WdplpBt5kV6bBGuA39lJRHqHCS0p3BCC1ss3zrw==",
+  "dgSpecHash": "RuhHDbGHVhJt7jDuhz0363KdrqGhHTXz0bo7q2K6KgV/j0lvchA1Dp8geulzdRA1PzAvdxKMiu8tTUxGAxNEnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sebas\\source\\repos\\WebbshoppenSS\\WebbshoppenSS.csproj",
+  "projectFilePath": "C:\\Users\\sebas\\Documents\\GitHub\\WebShopProject\\WebbshoppenSS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\sebas\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.19\\microsoft.aspnetcore.mvc.razor.extensions.3.1.19.nupkg.sha512",

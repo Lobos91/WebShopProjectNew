@@ -17,14 +17,14 @@ namespace WebbshoppenSS.Pages
         
 
         public List<Army> Alla { get; set; }
-        public IEnumerable<Army> GetRandomProduct { get; set; }
+        public IEnumerable<Army> Get3Product { get; set; }
 
         public void OnGet()
         {
 
 
             Alla = AllProducts.GetAllProducts();
-            GetRandomProduct = Alla.Where(x => x.ProductID == rnd.Next(1, 18)).Take(3);
+            Get3Product = Alla.Where(x => x.Details.Contains("arm")).ToList().Take(3);
         }
     }
 }
