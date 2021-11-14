@@ -10,6 +10,7 @@ namespace WebbshoppenSS.Pages
     public class PastModel : PageModel
     {
         public List<MiddleAge> ProductsLight { get; set; }
+
         public string TestButton { get; set; }
 
 
