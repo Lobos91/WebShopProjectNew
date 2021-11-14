@@ -1,0 +1,61 @@
+﻿@page
+@model WebbshoppenSS.Pages.PastModel
+@{
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Price</th>
+			<th scope="col">Type</th>
+			<th scope="col">Stock</th>
+			<th scoope="col">Category</th>
+
+
+
+		</tr>
+
+	</thead>
+	@foreach (var item in Model.ProductsLight)
+
+	{
+		<tbody>
+			<tr>
+				<th scope="row">@item.ProductID <img src="~/img/@item.ImgUrl" width="40" height="40" />  </th>
+				<td>@item.Name</td>
+				<td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
+				<td>@item.ProductType</td>
+				<td>@item.Quanity</td>
+				<td>@item.GetType().Name</td>
+			<td>
+					<form method="post">
+						<div class="mb-3">
+							<button class="btn btn-primary" type="submit">Buy</button>
+						</div>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+
+						<button class="btn btn-secondary btn-sm" type="button" data-toggle="collapse" data-target="#@item.Name.Replace( " ", "")" aria-expanded="false" aria-controls="collapseExample">
+							More info
+						</button>
+					</p>
+					<div class="collapse" id="@item.Name.Replace( " ", "")">
+						<div class="card card-body">
+							@item.Details
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+
+	}
+
+</table>
+
+<p>@Model.TestButton</p>

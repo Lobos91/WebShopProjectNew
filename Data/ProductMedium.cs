@@ -20,7 +20,7 @@ namespace WebbshoppenSS.Data
                     new NowAge()  // Soldier 1/3 
                     {
                         ProductID = 7,
-                        Name = "Marine",
+                        Name = "Marine One",
                         Price = 600,
                         ImgUrl ="SoldierMedium1.jpg",
                         ProductType = ProductType.Infantry,
@@ -33,7 +33,7 @@ namespace WebbshoppenSS.Data
                     new NowAge()  // Soldier 2/3 
                     {
                         ProductID = 8,
-                        Name = "Marine",
+                        Name = "Marine Two",
                         Price = 1000,
                         ImgUrl ="SoldierMedium2.jpg",
                         ProductType = ProductType.Infantry,
@@ -46,7 +46,7 @@ namespace WebbshoppenSS.Data
                     new NowAge()  // Soldier 3/3 
                     {
                         ProductID = 9,
-                        Name = "Marine",
+                        Name = "Marine Three",
                         Price = 1250,
                         ImgUrl ="SoldierMedium3.jpg",
                         ProductType = ProductType.Infantry,

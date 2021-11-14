@@ -55,7 +55,7 @@ namespace WebbshoppenSS.Data
                    new FutureAge()
                     {
                         ProductID = 16,
-                        Name = "AFU-200",
+                        Name = "AFU-200 One",
                         Price = 15000,
                         ImgUrl ="VehicleHeavy1.jpg",
                         ProductType = ProductType.Vehilce,
@@ -67,7 +67,7 @@ namespace WebbshoppenSS.Data
                     new FutureAge()
                     {
                         ProductID = 17,
-                        Name = "AFU-200",
+                        Name = "AFU-200 Two",
                         Price = 30000,
                         ImgUrl ="VehicleHeavy2.jpg",
                         ProductType = ProductType.Vehilce,
@@ -79,7 +79,7 @@ namespace WebbshoppenSS.Data
                       new FutureAge()
                     {
                         ProductID = 18,
-                        Name = "AFU-200",
+                        Name = "AFU-200 Three",
                         Price = 50000,
                         ImgUrl ="VehicleHeavy3.jpg",
                         ProductType = ProductType.Vehilce,
