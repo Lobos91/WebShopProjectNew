@@ -22,21 +22,24 @@
 
 	{
 		<tbody>
-			<tr>
-				<th scope="row">@item.ProductID <img src="~/img/@item.ImgUrl" width="40" height="40" />  </th>
-				<td>@item.Name</td>
-				<td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
-				<td>@item.ProductType</td>
-				<td>@item.Quanity</td>
-				<td>@item.GetType().Name</td>
-			<td>
-					<form method="post" action="/Cart">
-						<div class="mb-3">
-							<button class="btn btn-primary" type="submit">Buy</button>
-						</div>
-					</form>
-				</td>
-			</tr>
+            <tr>
+                <th scope="row">@item.ProductID <img src="~/img/@item.ImgUrl" width="40" height="40" />  </th>
+                <td>@item.Name</td>
+                <td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
+                <td>@item.ProductType</td>
+                <td>@item.Quanity</td>
+                @foreach (var category in item.ProductCategory)
+                {
+                    <td> @category</td>
+                }
+                <td>
+                    <form method="post" action="/Cart">
+                        <div class="mb-3">
+                            <button class="btn btn-primary" type="submit">Buy</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
 			<tr>
 				<td>
 					<p>
