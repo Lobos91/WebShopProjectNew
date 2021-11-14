@@ -9,40 +9,41 @@
 <h5>Product Manager:</h5>
 
 <table class="table">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Type</th>
-            <th scope="col">Stock</th>
-            <th scoope="col">Category</th>
-            <th><a class="btn btn-primary" asp-page="/Admin/Create">Create new product</a>   </th>
-            @foreach (var item in Model.Result)
-            {
-        <tbody>
-            <tr>
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Price</th>
+			<th scope="col">Type</th>
+			<th scope="col">Stock</th>
+			<th scoope="col">Category</th>
+			<th><a class="btn btn-primary" asp-page="/Admin/Create">Create new product</a>   </th>
+				</tr>
 
-                <th scope="row">@item.ProductID <img src="~/img/@item.ImgUrl" width="40" height="40" />  </th>
-                <td>@item.Name</td>
-                <td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
-                <td>@item.ProductType</td>
-                <td>@item.Quanity</td>
-                @foreach (var category in item.ProductCategory)
-                {
-                    <td class="card-title">Type: @category</td>
-                }
+	</thead>
+			@foreach (var item in Model.Result)
+			{
+		<tbody>
+			<tr>
 
-                <td>
-                    <a asp-page="/Admin/Edit" asp-route-Id="@item.ProductID">Edit</a>  || Delete
-                </td>
-            </tr>
-        </tbody>
-    }
-    
-    </tr>
+				<th scope="row">@item.ProductID <img src="~/img/@item.ImgUrl" width="40" height="40" />  </th>
+				<td>@item.Name</td>
+				<td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
+				<td>@item.ProductType</td>
+				<td>@item.Quanity</td>
+						@foreach (var category in item.ProductCategory)
+						{
+					<td class="card-title">Type: @category</td>
+						}
 
-    </thead>
+				<td>
+					<a asp-page="/Admin/Edit" asp-route-Id="@item.ProductID">Edit</a>  || Delete
+				</td>
+			</tr>
+		</tbody>
+			}
+
+
 </table>
 
 
