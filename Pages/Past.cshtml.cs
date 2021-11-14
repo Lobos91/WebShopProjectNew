@@ -12,17 +12,19 @@ namespace WebbshoppenSS.Pages
         public List<MiddleAge> ProductsLight { get; set; }
 
         public string TestButton { get; set; }
+        public int MyCounter { get; set; }
 
-
-        public void OnGet()
+        public void OnGet(int add)
         {
             ProductsLight = ProductLight.GetProductsLight();
             ProductsLight = ProductsLight.OrderBy(m => m.ProductID).ToList();
-
+            Models.Count.Counter += add;
+            MyCounter = Models.Count.Counter;
         }
 
-        public void OnPost()
+        public void OnPost(int add)
         {
+
             ProductsLight = ProductLight.GetProductsLight();
             ProductsLight.OrderBy(m => m.ProductID).ToList();
             TestButton = "WOW!";

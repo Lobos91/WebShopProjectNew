@@ -35,7 +35,10 @@
                 <td>
                     <form method="post" action="/Cart">
                         <div class="mb-3">
-                            <button class="btn btn-primary" type="submit">Buy</button>
+@*                            <button class="btn btn-primary" type="submit">Buy</button>*@
+							 <a asp-page="/Past" asp-route-add="1" class="btn btn-success">Lägg till</a> 
+							 @item.Quanity - 1
+							 	 <h1>@Model.MyCounter</h1>
                         </div>
                     </form>
                 </td>
@@ -60,5 +63,9 @@
 	}
 
 </table>
+<div> 
+	 <h1>@Model.MyCounter</h1>
+ <a asp-page="/Past" asp-route-add="1" class="btn btn-success">Lägg till</a> 
 
 <p>@Model.TestButton</p>
+</div>
