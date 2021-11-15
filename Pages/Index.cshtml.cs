@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebbshoppenSS.Models;
 using WebbshoppenSS.Data;
 using System.Collections;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebbshoppenSS.Pages
 {
@@ -16,6 +17,10 @@ namespace WebbshoppenSS.Pages
         public List<Product> Alla { get; set; }
         public IEnumerable<Product> Get3Product { get; set; }
 
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+
         public void OnGet()
         {
             Alla = AllProducts.GetAllProducts();
@@ -23,6 +28,17 @@ namespace WebbshoppenSS.Pages
 
             //(For tests only) Return old units
             // Get3Product = Alla.Where(x => x.ProductCategory.Contains("Old units"));  
+
+           
+                var products = from m in AllProducts.Products
+                             select m;
+                if (!string.IsNullOrEmpty(SearchString))
+                {
+                    products = products.Where(s => s.Name.Contains(SearchString));
+                }
+
+                Alla = products.ToList();
+            
         }
     }
 }
