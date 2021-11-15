@@ -14,8 +14,9 @@ namespace WebbshoppenSS.Pages
         public void OnGet()
         {
 
-            //Funkar ej
+            //funkar lite
             GetShoppingCarts = ShoppingCart.GetShoppingCart();
+            GetShoppingCarts.OrderBy(m => m.ProductID).ToList();
         }
     }
 }

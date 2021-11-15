@@ -11,6 +11,8 @@ namespace WebbshoppenSS.Pages
     public class FutureModel : PageModel
     {
         public List<FutureAge> ProductsHeavy { get; set; }
+
+        public List<ShoppingCart> Products { get; set; }
         public string TestButton { get; set; }
         public void OnGet()
         {
@@ -18,11 +20,12 @@ namespace WebbshoppenSS.Pages
             ProductsHeavy.OrderBy(m => m.ProductID).ToList();
         }
 
-        public void OnPost(int id)
+        public IActionResult OnPost(int id)
         {
 
             ShoppingCart.AddToCart(id);
 
+            return RedirectToPage("/Future");
 
             //ProductsHeavy = ProductHeavy.GetProductsHeavy();
             //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
