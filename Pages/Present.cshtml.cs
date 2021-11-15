@@ -18,11 +18,16 @@ namespace WebbshoppenSS.Pages
             ProductsMedium.OrderBy(m => m.ProductID).ToList();
         }
 
-        public void OnPost()
+        public IActionResult OnPost(int id)
         {
-            ProductsMedium = ProductMedium.GetProductsMedium();
-            ProductsMedium.OrderBy(m => m.ProductID).ToList();
-            TestButton = "WOW!";
+
+            ShoppingCart.AddToCart(id);
+
+            return RedirectToPage("/Present");
+
+            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
+            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
+            //TestButton = "WOW!";
         }
 
     }

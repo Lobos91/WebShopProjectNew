@@ -11,12 +11,25 @@ namespace WebbshoppenSS.Pages
     {
         public List<Product> GetShoppingCarts { get; set; }
 
+
         public void OnGet()
         {
-
             //funkar lite
             GetShoppingCarts = ShoppingCart.GetShoppingCart();
             GetShoppingCarts.OrderBy(m => m.ProductID).ToList();
+
+            //var duplicates = GetShoppingCarts
+            //      .GroupBy(r => r.ProductID)
+            //      .Where(g => g.Count() > 1)
+            //      .ToList();
+
+            //GetShoppingCarts
+            //      .GroupBy(r => r.ProductID)
+            //      .Select(g => g.First())
+            //      .ToList();
+
         }
+
+
     }
 }
