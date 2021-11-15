@@ -17,6 +17,8 @@ namespace WebbshoppenSS.Pages.Admin
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
 
+        
+
         public void OnGet()
         {
            GetAllProducts = Data.AllProducts.GetAllProducts();
