@@ -1,20 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
+using WebbshoppenSS.Models;
+using System.Linq;
+using WebbshoppenSS.Data;
 
 namespace WebbshoppenSS.Pages
 {
     public class CartModel : PageModel
     {
-        [BindProperty]
-        public string ButtonTest { get; set; }
-        public int MyCounter { get; set; }
+        public List<Product> GetShoppingCarts { get; set; }
+
         public void OnGet()
         {
-        }
 
-        public void OnPost(int add)
-        {
-            MyCounter = add;
+            //Funkar ej
+            GetShoppingCarts = ShoppingCart.GetShoppingCart();
         }
     }
 }

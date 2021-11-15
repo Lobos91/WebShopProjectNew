@@ -5,7 +5,9 @@
 
 
 <div>
-							 	 <h1>@Model.MyCounter</h1>
-								  <h1>@Model.ButtonTest</h1>
+	
+		@foreach (var item in Model.GetShoppingCarts) {
+			<h1>@item.Name</h1>
+		}
 
 </div>

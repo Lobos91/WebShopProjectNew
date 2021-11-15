@@ -34,4 +34,9 @@ namespace WebbshoppenSS.Models
     {
 
     }
+
+    //public class ShopCart : Product
+    //{
+
+    //}
 }

@@ -18,11 +18,15 @@ namespace WebbshoppenSS.Pages
             ProductsHeavy.OrderBy(m => m.ProductID).ToList();
         }
 
-        public void OnPost()
+        public void OnPost(int id)
         {
-            ProductsHeavy = ProductHeavy.GetProductsHeavy();
-            ProductsHeavy.OrderBy(m => m.ProductID).ToList();
-            TestButton = "WOW!";
+
+            ShoppingCart.AddToCart(id);
+
+
+            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
+            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
+            //TestButton = "WOW!";
         }
     }
 }
