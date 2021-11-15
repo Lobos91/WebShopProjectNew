@@ -11,15 +11,16 @@
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-
+            <input asp-for="@Model.ProdID" hidden />
             <div class="form-check">
-                <label for="validationDefault01" class="form-label">New product name</label>
-                <input type="text" asp-for="@Model.ProductName" class="form-control" id="validationDefault01" value="" required>
+                <label for="validationDefault01" class="form-label" >New product name </label>
+                <input type="text" asp-for="@Model.ProductName" class="form-control" id="validationDefault01" value="@Model.SelectedProduct.Name" required>
             </div>
 
             <br />
             <div class="mb-3">
                 <select asp-for="@Model.Category" class="form-select" required aria-label="Select category of product">
+                    
                     <option value="">Open this select menu</option>
                     <option value="ProductLight">Ancient units</option>
                     <option value="ProductMedium">Modern units</option>
@@ -41,18 +42,18 @@
 
             <div class="form-check mb-3">
                 <label for="validationDefault01" class="form-label">Desired stock amount</label>
-                <input asp-for="@Model.ProductQuanity" type="number" class="form-control" id="validationDefault01" value="" required>
+                <input asp-for="@Model.ProductQuanity" type="number" class="form-control" id="validationDefault01" value="@Model.SelectedProduct.Quanity" required>
             </div>
 
             <div class="form-check mb-3">
                 <label for="validationDefault01" class="form-label">Price</label>
-                <input asp-for="@Model.ProductPrice" type="number" class="form-control" id="validationDefault01" value="" required>
+                <input asp-for="@Model.ProductPrice" type="number" class="form-control" id="validationDefault01" value="@Model.SelectedProduct.Price" required>
             </div>
 
 
             <div class="form-check mb-3">
                 <label for="validationTextarea" class="form-label">Detail Area</label>
-                <textarea asp-for="@Model.ProductDetails" class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                <textarea asp-for="@Model.ProductDetails" class="form-control" id="validationTextarea" placeholder="Product details" required></textarea>
                 <div class="invalid-feedback">
                     Please enter product details in the Detail Area.
                 </div>
