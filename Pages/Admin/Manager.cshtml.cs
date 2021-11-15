@@ -26,9 +26,9 @@ namespace WebbshoppenSS.Pages.Admin
 
             var products = from m in AllProducts.Products
                            select m;
-            if (!string.IsNullOrEmpty(SearchString))
+            if (!string.IsNullOrWhiteSpace(SearchString))
             {
-                products = products.Where(s => s.Name.Contains(SearchString));
+                products = products.Where(s => s.Name.ToLower().Contains(SearchString));
             }
 
             Result = products.ToList();
