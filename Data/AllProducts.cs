@@ -29,8 +29,20 @@ namespace WebbshoppenSS.Data
             return Products;
         }
 
+        public static void UpdateProduct(Product updatedProduct)
+        {
 
+            int index = Products.IndexOf(Products.Where(p => p.ProductID == updatedProduct.ProductID).FirstOrDefault());
 
+            Products[index].Name = updatedProduct.Name;
+            Products[index].Quanity = updatedProduct.Quanity;
+            Products[index].Price = updatedProduct.Price;
+            Products[index].Details = updatedProduct.Details;
+            Products[index].ImgUrl = updatedProduct.ImgUrl;
+            Products[index].ProductType = updatedProduct.ProductType;
+            Products[index].ProductCategory = updatedProduct.ProductCategory;
+            Products[index].Featured = updatedProduct.Featured;
+        }
 
     }
 }

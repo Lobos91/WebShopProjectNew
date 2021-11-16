@@ -35,7 +35,7 @@
                 <td>
                     <form method="post">
                         <div class="mb-3">
-                            <button class="btn btn-primary" type="submit">Buy</button>
+                            <button class="btn btn-primary" type="submit" asp-route-id="@item.ProductID">Buy</button>
                         </div>
                     </form>
                 </td>
@@ -49,8 +49,9 @@
 						</button>
 					</p>
 					<div class="collapse" id="@item.Name.Replace(" ", "")">
-						<div class="card card-body">
-							@item.Details
+						<div class="card card-body" style="width: 18rem;">
+							<img src="~/img/@item.ImgUrl" class="card-img-top" />
+							<p class="card-text">@item.Details</p>
 						</div>
 					</div>
 				</td>

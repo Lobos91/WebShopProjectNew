@@ -33,5 +33,6 @@ namespace WebbshoppenSS.Pages.Admin
 
             Result = products.ToList();
         }
+      
     }
 }

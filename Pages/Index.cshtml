@@ -19,7 +19,7 @@
 <div class="row">
 
 
-            @foreach (var item in Model.Get3Product)
+            @foreach (var item in Model.GetFeatured)
             {
     <div class="card" style="width:20em; margin:10px;">
         <a asp-page="">
@@ -37,7 +37,6 @@
             <p class="card-text">In Stock: @item.Quanity</p>
         </div>
         <div class="card-footer">
-           
             <small>
                 <a class="btn btn-info" asp-page="">Details</a>
                 <a class="btn btn-success" asp-page="">Add to Card</a>

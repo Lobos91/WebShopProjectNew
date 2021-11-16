@@ -50,9 +50,10 @@
 							More info
 						</button>
 					</p>
-					<div class="collapse" id="@item.Name.Replace( " ", "")">
-						<div class="card card-body">
-							@item.Details
+					<div class="collapse" id="@item.Name.Replace(" ", "")">
+						<div class="card card-body" style="width: 18rem;">
+							<img src="~/img/@item.ImgUrl" class="card-img-top" />
+							<p class="card-text">@item.Details</p>
 						</div>
 					</div>
 				</td>
