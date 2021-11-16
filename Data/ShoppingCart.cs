@@ -19,6 +19,8 @@ namespace WebbshoppenSS.Data
         {
             Product productToAdd = Data.AllProducts.GetAllProducts().Where(product => product.ProductID == productId).FirstOrDefault();
 
+            productToAdd.Quanity += -1;
+
             shopCarts.Add(productToAdd);
         }
     }
