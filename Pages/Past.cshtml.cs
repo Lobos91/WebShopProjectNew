@@ -18,16 +18,18 @@ namespace WebbshoppenSS.Pages
         {
             ProductsLight = ProductLight.GetProductsLight();
             ProductsLight = ProductsLight.OrderBy(m => m.ProductID).ToList();
-            Models.Count.Counter += add;
-            MyCounter = Models.Count.Counter;
         }
 
-        public void OnPost(int add)
+        public IActionResult OnPost(int id)
         {
 
-            ProductsLight = ProductLight.GetProductsLight();
-            ProductsLight.OrderBy(m => m.ProductID).ToList();
-            TestButton = "WOW!";
+            ShoppingCart.AddToCart(id);
+
+            return RedirectToPage("/Past");
+
+            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
+            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
+            //TestButton = "WOW!";
         }
 
 
