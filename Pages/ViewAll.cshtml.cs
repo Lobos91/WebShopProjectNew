@@ -14,7 +14,10 @@ namespace WebbshoppenSS.Pages
             public List<Product> GetAllProducts { get; set; }
             public List<Product> Result { get; set; }
 
-            [BindProperty(SupportsGet = true)]
+            public List<Product> Result2 { get; set; }
+
+
+        [BindProperty(SupportsGet = true)]
             public string SearchString { get; set; }
 
 
@@ -31,7 +34,7 @@ namespace WebbshoppenSS.Pages
                     products = products.Where(s => s.Name.ToLower().Contains(SearchString));
                 }
 
-                Result = products.ToList();
+                Result2 = products.ToList();
             }
         
     }
