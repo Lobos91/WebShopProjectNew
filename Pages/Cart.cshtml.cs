@@ -14,10 +14,7 @@ namespace WebbshoppenSS.Pages
         public List<Product> GetShoppingCarts { get; set; }
 
         [BindProperty]
-
-        // public string ButtonTest { get; set; }
-        // public int MyCounter { get; set; }
-        public double Shipping { get; set; }
+        public int Shipping { get; set; }
         [BindProperty]
         public string FirstName { get; set; }
         [BindProperty]
@@ -55,12 +52,15 @@ namespace WebbshoppenSS.Pages
 
         }
 
-        public IActionResult OnPostAdressShipping()
+        public void OnPostAdressShipping()
         {
-            Shipping = 29;
             GetShoppingCarts = ShoppingCart.GetShoppingCart();
-            GetShoppingCarts.Where(x => x.Amount == (x.Amount + Shipping));
-            return RedirectToPage("/Cart");
+
+            var ship = Request.Form["shipping"];
+
+            ViewData["confirmation"] = $"{ship}";
+
+            //return RedirectToPage("/Cart");
 
         }
 
