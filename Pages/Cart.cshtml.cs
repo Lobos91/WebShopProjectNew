@@ -57,13 +57,16 @@ namespace WebbshoppenSS.Pages
 
         public IActionResult OnPostAdressShipping()
         {
-
+            GetShoppingCarts = ShoppingCart.GetShoppingCart();
+            GetShoppingCarts.Where(x => x.Amount == x.Amount + Shipping);
             return RedirectToPage("/Cart");
 
         }
 
-        public IActionResult OnPostBuy(int id)
+        public IActionResult OnPostBuy()
         {
+            GetShoppingCarts = ShoppingCart.GetShoppingCart();
+            GetShoppingCarts.Clear();
             return RedirectToPage("/Cart");
 
         }
