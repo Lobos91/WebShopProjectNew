@@ -1,11 +1,81 @@
 ﻿@page
 @model WebbshoppenSS.Pages.CartModel
 @{
+    double sum = 0;
+    //int dataCount = 0;
+    double shipping = 0;
+    double shippingOne = 29;
+    double shippingTwo = 99;
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Price</th>
+            <th scope="col">Amount</th>
+        </tr>
+
+    </thead>
+
+    @foreach (var item in Model.GetShoppingCarts)
+    {
+
+
+        <tbody>
+            <tr>
+                <th scope="row">@item.ProductID </th>
+                <td>@item.Name</td>
+                <td>@item.ProductType</td>
+                <td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
+                <td>Amount: @item.Amount</td>
+                <td>
+                    <form method="post">
+                        <div class="mb-3">
+                            <button class="btn btn-primary" type="submit" asp-page-handler="Add" asp-route-id="@item.ProductID">Add</button>
+                            <button class="btn btn-primary" type="submit" asp-page-handler="Remove" asp-route-id="@item.ProductID">Remove</button>
+                        </div>
+                    </form>
+                </td>
+
+            </tr>
+        </tbody>
+        sum += item.Price;
+        //dataCount++;
+        //item.Quanity += -1;
+    }
+</table>
+
+<div class="col-6">
+    <h1>YOUR TOTAL: @sum</h1>
+</div>
+
+<form>
+    <input type="radio" name="shipping" value="@shippingOne" />@shippingOne
+    <br />
+
+    <input type="radio" asp-for="shipping" name="shipping" value="@shippingTwo" />@shippingTwo
+    <br />
+
+</form>
+
+
+
+
+
+@{
+    <div class="col-6">
+        <h1>Price with shipping: @(sum + shipping)</h1>
+        <h3>VAT: @((sum + shipping) * 0.2)</h3>
+    </div>
+    <form method="post">
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Buy</button>
+        </div>
+    </form>
 }
 
 
-<div>
-							 	 <h1>@Model.MyCounter</h1>
-								  <h1>@Model.ButtonTest</h1>
 
-</div>
