@@ -18,5 +18,6 @@ namespace WebbshoppenSS.Pages.Admin
            GetAllProducts = Data.AllProducts.GetAllProducts();
            Result = GetAllProducts.OrderBy(m => m.ProductID).ToList();
         }
+      
     }
 }

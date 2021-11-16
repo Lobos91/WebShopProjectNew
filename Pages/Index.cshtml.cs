@@ -14,15 +14,14 @@ namespace WebbshoppenSS.Pages
     public class IndexModel : PageModel
     {
         public List<Product> Alla { get; set; }
-        public IEnumerable<Product> Get3Product { get; set; }
+        public IEnumerable<Product> GetFeatured { get; set; }
 
-        public void OnGet()
+        public void OnGet(bool IsChecked)
         {
             Alla = AllProducts.GetAllProducts();
-            Get3Product = Alla.Where(x => x.Details.Contains("arm")).ToList().Take(3);
 
-            //(For tests only) Return old units
-            // Get3Product = Alla.Where(x => x.ProductCategory.Contains("Old units"));  
+            GetFeatured = Alla.Where(x => x.Featured == true);
+          
         }
     }
 }

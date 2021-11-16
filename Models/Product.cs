@@ -16,8 +16,10 @@ namespace WebbshoppenSS.Models
         public string ImgUrl { get; set; }
         public ProductType ProductType { get; set; }
         public List<string> ProductCategory { get; set; }
-
+        public bool Featured { get; set; }
         public int Amount { get; set; }
+      
+
     }
     
     public class MiddleAge : Product
