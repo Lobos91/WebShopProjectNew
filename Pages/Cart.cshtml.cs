@@ -12,27 +12,28 @@ namespace WebbshoppenSS.Pages
     public class CartModel : PageModel
     {
         public List<Product> GetShoppingCarts { get; set; }
+
         [BindProperty]
 
-        public string ButtonTest { get; set; }
-        public int MyCounter { get; set; }
-        public double shipping { get; set; }
+        // public string ButtonTest { get; set; }
+        // public int MyCounter { get; set; }
+        public double Shipping { get; set; }
+        [BindProperty]
+        public string FirstName { get; set; }
+        [BindProperty]
+        public string LastName { get; set; }
+        [BindProperty]
+
+        public int PostalCode { get; set; }
+        [BindProperty]
+        public string Street { get; set; }
+        [BindProperty]
+        public string City { get; set; }
 
         public void OnGet()
         {
-            //funkar lite
             GetShoppingCarts = ShoppingCart.GetShoppingCart();
             GetShoppingCarts.OrderBy(m => m.ProductID).ToList();
-
-            //var duplicates = GetShoppingCarts
-            //      .GroupBy(r => r.ProductID)
-            //      .Where(g => g.Count() > 1)
-            //      .ToList();
-
-            //GetShoppingCarts
-            //      .GroupBy(r => r.ProductID)
-            //      .Select(g => g.First())
-            //      .ToList();
 
         }
 
@@ -43,9 +44,6 @@ namespace WebbshoppenSS.Pages
 
             return RedirectToPage("/Cart");
 
-            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
-            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
-            //TestButton = "WOW!";
         }
 
         public IActionResult OnPostRemove(int id)
@@ -55,9 +53,25 @@ namespace WebbshoppenSS.Pages
 
             return RedirectToPage("/Cart");
 
-            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
-            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
-            //TestButton = "WOW!";
+        }
+
+        public IActionResult OnPostAdressShipping()
+        {
+            Shipping = 29;
+            GetShoppingCarts = ShoppingCart.GetShoppingCart();
+            GetShoppingCarts.Where(x => x.Amount == (x.Amount + Shipping));
+            return RedirectToPage("/Cart");
+
+        }
+
+        public IActionResult OnPostBuy()
+        {
+            GetShoppingCarts = ShoppingCart.GetShoppingCart();
+            GetShoppingCarts.Clear();
+            
+
+            return RedirectToPage("/OrderComplete");
+
         }
     }
 }

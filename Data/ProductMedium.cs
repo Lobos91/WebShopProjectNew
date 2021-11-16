@@ -67,6 +67,7 @@ namespace WebbshoppenSS.Data
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
+                         Featured = true
 
                      },
                      new NowAge()  // Vehicle 2/3 

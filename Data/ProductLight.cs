@@ -39,7 +39,8 @@ namespace WebbshoppenSS.Data
                         Quanity = 1000,
                         Details = "Intermidate level soldier.\\" +
                         "Perfect choose for regular battles. ",
-                        ProductCategory = new List<string>(){ "Old units"}
+                        ProductCategory = new List<string>(){ "Old units"},
+                        Featured = true
 
                     },
                     new MiddleAge()  // Soldier 3/3 

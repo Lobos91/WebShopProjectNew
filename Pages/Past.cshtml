@@ -33,11 +33,10 @@
                     <td> @category</td>
                 }
                 <td>
-                    <form method="post" action="/Cart">
+                <td>
+                    <form method="post">
                         <div class="mb-3">
-@*                            <button class="btn btn-primary" type="submit">Buy</button>*@
-							 <a asp-page="/Past" asp-route-add="1" class="btn btn-success">Lägg till</a> 
-							 	 <h1>@Model.MyCounter</h1>
+                            <button class="btn btn-primary" type="submit" asp-route-id="@item.ProductID">Buy</button>
                         </div>
                     </form>
                 </td>
@@ -63,9 +62,4 @@
 	}
 
 </table>
-<div> 
-	 <h1>@Model.MyCounter</h1>
- <a asp-page="/Past" asp-route-add="1" class="btn btn-success">Lägg till</a> 
 
-<p>@Model.TestButton</p>
-</div>

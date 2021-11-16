@@ -39,6 +39,7 @@ namespace WebbshoppenSS.Data
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
+                         Featured = true
                     },
                       new FutureAge()
                     {
