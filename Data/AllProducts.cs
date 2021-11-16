@@ -41,6 +41,7 @@ namespace WebbshoppenSS.Data
             Products[index].ImgUrl = updatedProduct.ImgUrl;
             Products[index].ProductType = updatedProduct.ProductType;
             Products[index].ProductCategory = updatedProduct.ProductCategory;
+            Products[index].Featured = updatedProduct.Featured;
         }
 
     }

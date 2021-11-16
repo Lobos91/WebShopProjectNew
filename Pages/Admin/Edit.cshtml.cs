@@ -24,6 +24,7 @@ namespace WebbshoppenSS.Pages.Admin
         public string ProductImage { get; set; }
         public string ProductDetails { get; set; }
         public string  ProdCategory { get; set; }
+        public bool Featured { get; set; }
 
         public void OnGet(int Id)
         {
@@ -47,7 +48,8 @@ namespace WebbshoppenSS.Pages.Admin
                     Quanity = ProductQuanity,
                     ImgUrl = ProductImage,
                     Details = ProductDetails,
-                    ProductCategory = new List<string> { "Old units" }
+                    ProductCategory = new List<string> { "Old units" },
+                    Featured = this.Featured
 
                  };
                 Data.AllProducts.UpdateProduct(updatedProduct);
@@ -65,7 +67,8 @@ namespace WebbshoppenSS.Pages.Admin
                     Quanity = ProductQuanity,
                     ImgUrl = ProductImage,
                     Details = ProductDetails,
-                    ProductCategory = new List<string> { "Modern units" }
+                    ProductCategory = new List<string> { "Modern units" },
+                     Featured = this.Featured
                 };
 
                 Data.AllProducts.UpdateProduct(updatedProduct);
@@ -83,7 +86,8 @@ namespace WebbshoppenSS.Pages.Admin
                     Quanity = ProductQuanity,
                     ImgUrl = ProductImage,
                     Details = ProductDetails,
-                    ProductCategory = new List<string> { "Future units" }
+                    ProductCategory = new List<string> { "Future units" },
+                     Featured = this.Featured
                 };
 
                 Data.AllProducts.UpdateProduct(updatedProduct);
