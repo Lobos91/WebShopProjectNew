@@ -17,12 +17,12 @@ namespace WebbshoppenSS.Pages.Admin
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
 
-        
+
 
         public void OnGet()
         {
-           GetAllProducts = Data.AllProducts.GetAllProducts();
-           Result = GetAllProducts.OrderBy(m => m.ProductID).ToList();
+            GetAllProducts = Data.AllProducts.GetAllProducts();
+            Result = GetAllProducts.OrderBy(m => m.ProductID).ToList();
 
             var products = from m in AllProducts.Products
                            select m;

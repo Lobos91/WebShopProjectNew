@@ -20,8 +20,6 @@ namespace WebbshoppenSS.Pages
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
 
-        public void OnGet()
-
         public void OnGet(bool IsChecked)
 
         {
