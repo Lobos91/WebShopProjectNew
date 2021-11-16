@@ -14,8 +14,8 @@
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Type</th>
-            <th scope="col">Stock</th>
             <th scope="col">Price</th>
+            <th scope="col">Amount</th>
         </tr>
 
     </thead>
@@ -29,15 +29,15 @@
                 <th scope="row">@item.ProductID </th>
                 <td>@item.Name</td>
                 <td>@item.ProductType</td>
-                <td>@item.Quanity</td>
                 <td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
+                <td>Amount: @item.Amount</td>
                 <td>
-                    <div class="mb-3">
-                        <button class="btn btn-primary" type="submit">Add</button>
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-danger" type="submit">Remove</button>
-                    </div>
+                    <form method="post">
+                        <div class="mb-3">
+                            <button class="btn btn-primary" type="submit" asp-page-handler="Add" asp-route-id="@item.ProductID">Add</button>
+                            <button class="btn btn-primary" type="submit" asp-page-handler="Remove" asp-route-id="@item.ProductID">Remove</button>
+                        </div>
+                    </form>
                 </td>
 
             </tr>
@@ -53,11 +53,14 @@
 </div>
 
 <form>
+    <input type="radio" name="shipping" value="@shippingOne" />@shippingOne
+    <br />
+
+    <input type="radio" asp-for="shipping" name="shipping" value="@shippingTwo" />@shippingTwo
+    <br />
+
 </form>
 
-    <input type="radio" name="shipping" value="@shippingOne" />@shippingOne<br />
-
-    <input type="radio" name="shipping" value="@shippingTwo" />@shippingTwo<br />
 
 
 

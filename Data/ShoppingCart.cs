@@ -20,8 +20,21 @@ namespace WebbshoppenSS.Data
             Product productToAdd = Data.AllProducts.GetAllProducts().Where(product => product.ProductID == productId).FirstOrDefault();
 
             productToAdd.Quanity += -1;
+            productToAdd.Amount += 1;
+
 
             shopCarts.Add(productToAdd);
+        }
+
+        public static void RemoveFromCart(int productId)
+        {
+            Product productToRemove = Data.AllProducts.GetAllProducts().Where(product => product.ProductID == productId).FirstOrDefault();
+
+            productToRemove.Quanity += +1;
+            productToRemove.Amount += -1;
+
+
+            shopCarts.Remove(productToRemove);
         }
     }
 }

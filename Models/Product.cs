@@ -17,7 +17,7 @@ namespace WebbshoppenSS.Models
         public ProductType ProductType { get; set; }
         public List<string> ProductCategory { get; set; }
 
-
+        public int Amount { get; set; }
     }
     
     public class MiddleAge : Product

@@ -10,7 +10,10 @@ namespace WebbshoppenSS.Pages
     public class CartModel : PageModel
     {
         public List<Product> GetShoppingCarts { get; set; }
+        [BindProperty]
         public double shipping { get; set; }
+
+
 
 
         public void OnGet()
@@ -31,6 +34,28 @@ namespace WebbshoppenSS.Pages
 
         }
 
+        public IActionResult OnPostAdd(int id)
+        {
 
+            ShoppingCart.AddToCart(id);
+
+            return RedirectToPage("/Cart");
+
+            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
+            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
+            //TestButton = "WOW!";
+        }
+
+        public IActionResult OnPostRemove(int id)
+        {
+
+            ShoppingCart.RemoveFromCart(id);
+
+            return RedirectToPage("/Cart");
+
+            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
+            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
+            //TestButton = "WOW!";
+        }
     }
 }
