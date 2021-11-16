@@ -36,5 +36,6 @@ namespace WebbshoppenSS.Data
 
             shopCarts.Remove(productToRemove);
         }
+
     }
 }

@@ -27,9 +27,6 @@ namespace WebbshoppenSS.Pages
 
             return RedirectToPage("/Past");
 
-            //ProductsHeavy = ProductHeavy.GetProductsHeavy();
-            //ProductsHeavy.OrderBy(m => m.ProductID).ToList();
-            //TestButton = "WOW!";
         }
 
 

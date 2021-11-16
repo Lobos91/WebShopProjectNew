@@ -52,27 +52,74 @@
     <h1>YOUR TOTAL: @sum</h1>
 </div>
 
-<form>
+<form method="post">
+
+    <div class="form-check">
+        <label for="validationDefault01" class="form-label">First Name</label>
+        <input type="text" asp-for="@Model.FirstName" class="form-control" value="" required placeholder="First Name">
+    </div>
+    <div class="form-check">
+        <label for="validationDefault01" class="form-label">Last Name</label>
+        <input type="text" asp-for="@Model.LastName" class="form-control" value="" required placeholder="Last Name">
+    </div>
+
+    <div class="form-check">
+        <label for="validationDefault01" class="form-label">Postal Code</label>
+        <input type="text" asp-for="@Model.PostalCode" class="form-control" value="" required placeholder="Postal Code">
+    </div>
+
+    <div class="form-check">
+        <label for="validationDefault01" class="form-label">Street Address</label>
+        <input type="text" asp-for="@Model.Street" class="form-control" value="" required placeholder="Street">
+    </div>
+
+    <div class="form-check">
+        <label for="validationDefault01" class="form-label">City</label>
+        <input type="text" asp-for="@Model.City" class="form-control" value="" required placeholder="City">
+    </div>
+    <br />
     <input type="radio" name="shipping" value="@shippingOne" />@shippingOne
     <br />
 
-    <input type="radio" asp-for="shipping" name="shipping" value="@shippingTwo" />@shippingTwo
+    <input type="radio" asp-for="Shipping" name="shipping" value="@shippingTwo" />@shippingTwo
     <br />
 
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit" asp-page-handler="AdressShipping">Accept</button>
+    </div>
 </form>
-
 
 
 
 
 @{
     <div class="col-6">
-        <h1>Price with shipping: @(sum + shipping)</h1>
-        <h3>VAT: @((sum + shipping) * 0.2)</h3>
+        <div class="row">
+            <h1>Price with shipping: @(sum + shipping)</h1>
+            <h3>Without VAT: @((sum + shipping) * 0.8)</h3>
+        </div>
+
     </div>
     <form method="post">
+        <div class="col-4">
+            <div class="row">
+                <h3>Payment Method:</h3>
+            </div>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                CreditCard
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+                PayPal
+            </label>
+        </div>
         <div class="mb-3">
-            <button class="btn btn-primary" type="submit">Buy</button>
+            <button class="btn btn-primary" type="submit" asp-page-handler="Buy">Buy</button>
         </div>
     </form>
 }
