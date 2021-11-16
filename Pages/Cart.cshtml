@@ -1,6 +1,11 @@
 ﻿@page
 @model WebbshoppenSS.Pages.CartModel
 @{
+    double sum = 0;
+    //int dataCount = 0;
+    double shipping = 0;
+    double shippingOne = 29;
+    double shippingTwo = 99;
 }
 
 <table class="table">
@@ -26,16 +31,48 @@
                 <td>@item.ProductType</td>
                 <td>@item.Quanity</td>
                 <td>EUR: @item.Price / SEK: @(item.PriceSek = item.Price * 9.5 )</td>
-
-
+                <td>
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Add</button>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-danger" type="submit">Remove</button>
+                    </div>
+                </td>
 
             </tr>
         </tbody>
-
+        sum += item.Price;
+        //dataCount++;
+        item.Quanity += -1;
     }
 </table>
 
+<div class="col-6">
+    <h1>YOUR TOTAL: @sum</h1>
+</div>
 
+<form>
+</form>
+
+    <input type="radio" name="shipping" value="@shippingOne" />@shippingOne<br />
+
+    <input type="radio" name="shipping" value="@shippingTwo" />@shippingTwo<br />
+
+
+
+
+@{
     <div class="col-6">
-      <h1>YOUR TOTAL:</h1>
+        <h1>Price with shipping: @(sum + shipping)</h1>
+        <h3>VAT: @((sum + shipping) * 0.2)</h3>
     </div>
+    <form method="post">
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Buy</button>
+        </div>
+    </form>
+}
+
+
+

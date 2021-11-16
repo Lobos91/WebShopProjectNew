@@ -10,6 +10,7 @@ namespace WebbshoppenSS.Pages
     public class CartModel : PageModel
     {
         public List<Product> GetShoppingCarts { get; set; }
+        public double shipping { get; set; }
 
 
         public void OnGet()

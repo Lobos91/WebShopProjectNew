@@ -35,8 +35,8 @@ namespace WebbshoppenSS.Models
 
     }
 
-    //public class ShopCart : Product
-    //{
-
-    //}
+    public class ShopCart : Product
+    {
+        public int Amount { get; set; }
+    }
 }
