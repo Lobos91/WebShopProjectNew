@@ -25,8 +25,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
                         Interplanetary = false,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Light armored infantry soldier. Can be useful as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
                     },
                     new FutureAge()
@@ -38,8 +37,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
                         Interplanetary = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Heavy armored infantry soldier. Highly trained and useful in any combat situation.",
                         ProductCategory = new List<string>(){ "Future units"},
                          Featured = true
                     },
@@ -52,8 +50,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
                         Interplanetary = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Elite bio-robot. Intelligent and useful. Can be used to repair spaceship.",
                         ProductCategory = new List<string>(){ "Future units"},
                     },
                    new FutureAge()
@@ -65,8 +62,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 20000,
                         Interplanetary = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Fast vehicle used to traverse varying terrain. Lightweight yet durable.",
                         ProductCategory = new List<string>(){ "Future units"},
                     },
                     new FutureAge()
@@ -78,8 +74,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
                         Interplanetary = false,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Heavy tank. As long as you are on the right side of the barrel, have no fear.",
                         ProductCategory = new List<string>(){ "Future units"},
                     },
                       new FutureAge()
@@ -91,8 +86,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
                         Interplanetary = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Travel the stars with style in this luxury space cruiser. Bring your own bombs in the huge storage area on lower deck.",
                         ProductCategory = new List<string>(){ "Future units"},
                     },
 
