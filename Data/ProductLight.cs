@@ -10,7 +10,7 @@ namespace WebbshoppenSS.Data
     {
         public static List<MiddleAge> ProductsLight { get; set; }
 
-        public static List<MiddleAge> GetProductsLight ()
+        public static List<MiddleAge> GetProductsLight()
         {
             if (ProductsLight == null || !ProductsLight.Any()) //Without that it won't add new product.
             {
@@ -26,6 +26,7 @@ namespace WebbshoppenSS.Data
                         Quanity = 1000,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
+                        HasShield = false,
                         ProductCategory = new List<string>(){ "Old units"}
 
                     },
@@ -39,6 +40,7 @@ namespace WebbshoppenSS.Data
                         Quanity = 1000,
                         Details = "Intermidate level soldier.\\" +
                         "Perfect choose for regular battles. ",
+                        HasShield = false,
                         ProductCategory = new List<string>(){ "Old units"},
                         Featured = true
 
@@ -53,6 +55,7 @@ namespace WebbshoppenSS.Data
                         Quanity = 1000,
                         Details = "Heavy armored elite Warrior\\" +
                         "Real hero of the battlefields.",
+                        HasShield = false,
                         ProductCategory = new List<string>(){ "Old units"}
                     },
                     new MiddleAge() // vehicle 1/3
@@ -64,6 +67,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 4000,
                         Details = "Regular soldier on battle horse will significantly improve your chances to win.",
+                        HasShield = true,
                         ProductCategory = new List<string>(){ "Old units"}
 
                     },
@@ -76,6 +80,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 4000,
                         Details = "Fast unit with two soldiers will provide bigger impact against your enemies.",
+                        HasShield = true,
                         ProductCategory = new List<string>(){ "Old units"}
                     },
                     new MiddleAge() // vehicle 3/3
@@ -87,6 +92,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 4000,
                         Details = "Giant war animal immune for enemy arrows and bolts. Can transport up to 20 soldiers.",
+                        HasShield = true,
                         ProductCategory = new List<string>(){ "Old units"},
                     }
 

@@ -25,6 +25,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="SoldierMedium1.jpg",
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
+                        LandBased = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
@@ -38,6 +39,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="SoldierMedium2.jpg",
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
+                        LandBased = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
@@ -51,6 +53,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="SoldierMedium3.jpg",
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
+                        LandBased = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
@@ -64,6 +67,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="VehicleMedium1.jpg",
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
+                        LandBased = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
@@ -78,6 +82,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="VehicleMedium2.jpg",
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
+                        LandBased = false,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
@@ -91,6 +96,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="VehicleMedium3.jpg",
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
+                        LandBased = false,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Modern units"},
