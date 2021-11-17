@@ -14,9 +14,6 @@ namespace WebbshoppenSS.Pages
         public List<Product> GetAllProducts { get; set; }
         public List<Product> Result { get; set; }
 
-        public List<Product> Result2 { get; set; }
-
-
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
 
@@ -32,6 +29,7 @@ namespace WebbshoppenSS.Pages
             if (!string.IsNullOrWhiteSpace(SearchString))
             {
                 products = products.Where(s => s.Name.ToLower().Contains(SearchString));
+            
             }
 
             Result = products.ToList();

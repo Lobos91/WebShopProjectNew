@@ -23,8 +23,8 @@ namespace WebbshoppenSS.Data
             ProductsHeavy = ProductHeavy.GetProductsHeavy();
 
             Products.AddRange(ProductsLight);
-            Products.AddRange(ProductsHeavy);
             Products.AddRange(ProductsMedium);
+            Products.AddRange(ProductsHeavy);
             
             return Products;
         }
