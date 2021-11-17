@@ -11,9 +11,6 @@ namespace WebbshoppenSS.Pages
     {
         public List<MiddleAge> ProductsLight { get; set; }
 
-        public string TestButton { get; set; }
-        public int MyCounter { get; set; }
-
         public void OnGet(int add)
         {
             ProductsLight = ProductLight.GetProductsLight();

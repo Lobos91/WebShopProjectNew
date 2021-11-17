@@ -11,9 +11,6 @@ namespace WebbshoppenSS.Pages
     public class FutureModel : PageModel
     {
         public List<FutureAge> ProductsHeavy { get; set; }
-
-        public List<ShoppingCart> Products { get; set; }
-        public string TestButton { get; set; }
         public void OnGet()
         {
             ProductsHeavy = ProductHeavy.GetProductsHeavy();

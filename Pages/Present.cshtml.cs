@@ -11,7 +11,6 @@ namespace WebbshoppenSS.Pages
     public class PresentModel : PageModel
     {
         public List<NowAge> ProductsMedium { get; set; }
-        public string TestButton { get; set; }
         public void OnGet()
         {
             ProductsMedium = ProductMedium.GetProductsMedium();

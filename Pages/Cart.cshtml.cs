@@ -15,17 +15,7 @@ namespace WebbshoppenSS.Pages
 
         [BindProperty]
         public int Shipping { get; set; }
-        [BindProperty]
-        public string FirstName { get; set; }
-        [BindProperty]
-        public string LastName { get; set; }
-        [BindProperty]
 
-        public int PostalCode { get; set; }
-        [BindProperty]
-        public string Street { get; set; }
-        [BindProperty]
-        public string City { get; set; }
 
         public void OnGet()
         {
