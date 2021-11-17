@@ -34,7 +34,7 @@ namespace WebbshoppenSS.Pages
                 products = products.Where(s => s.Name.ToLower().Contains(SearchString));
             }
 
-            Result2 = products.ToList();
+            Result = products.ToList();
         }
 
         public IActionResult OnPost(int id)

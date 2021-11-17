@@ -26,8 +26,8 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
                         LandBased = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Regular soldier of modern army" +
+                        "Needed on any of battles.",
                         ProductCategory = new List<string>(){ "Modern units"},
 
                     },
@@ -40,8 +40,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
                         LandBased = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Experienced tactic unit taht uses uses specialized or military equipment and tactics",
                         ProductCategory = new List<string>(){ "Modern units"},
 
                     },
@@ -54,8 +53,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
                         LandBased = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = " unit of soldiers or recruits picked for their competence and put in a special elite unit. Elite units enjoy some benefits as compared to other units, at least in the form of higher status",
                         ProductCategory = new List<string>(){ "Modern units"},
     
                     },
@@ -68,8 +66,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
                         LandBased = true,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = " armored fighting vehicle intended as a primary offensive weapon in front-line ground combat.",
                         ProductCategory = new List<string>(){ "Modern units"},
                          Featured = true
 
@@ -83,8 +80,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
                         LandBased = false,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Fighting F16 fighter is a single-engine multirole fighter aircraft originally developed by Fake Dynamics INC for the Netwon Webshop project.",
                         ProductCategory = new List<string>(){ "Modern units"},
 
                      },
@@ -97,8 +93,7 @@ namespace WebbshoppenSS.Data
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
                         LandBased = false,
-                        Details = "Light armored begginer level infantry soldier.\\" +
-                        "Can be usefull as a support for heavier units becouse of its speed.",
+                        Details = "Naval ship that is built and primarily intended for naval warfare. Heavy armoured and equipped.",
                         ProductCategory = new List<string>(){ "Modern units"},
                      }
 

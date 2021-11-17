@@ -3,14 +3,16 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+<!--
 <div class="container justify-content-sm-center">
-    <!--Creating Jumbotron inside container-->
-    <div class="jumbotron" style="margin-top: -2rem; margin-left:-15rem; margin-right: -15rem;
+
+<div class="jumbotron" style="margin-top: -2rem; margin-left:-15rem; margin-right: -15rem;
         padding: 9.2rem; padding-left: 1rem; padding-right: 1rem;  background-image: url(img/thumbinal.jpg)">
 
-    </div>
 </div>
+</div>
+     -->
+<img src="~/img/thumbinal.jpg" class="img-fluid" alt="Responsive image">
 
 
 <h1 class="text-center">Welcome in shop</h1>
@@ -19,25 +21,25 @@
 <div class="row">
 
 
-            @foreach (var item in Model.GetFeatured)
-            {
-    <div class="card" style="width:20em; margin:10px;">
-        <a asp-page="">
-            <img src="~/img/@item.ImgUrl" class="card-img-top" style="width:20rem; height:30rem;">
-        </a>
-       
-        <div class="card-body">
-            <h3 class="card-title">@item.Name</h3>
-            <h5 class="card-title">Unit: @item.ProductType</h5>
-            @foreach (var category in item.ProductCategory)
-            {
-                <h5 class="card-title">Type: @category</h5>
-            }
-            <h5 class="card-text"> Price: @item.Price&euro; (SEK: @(item.Price * 9.5))</h5>
-            <p class="card-text">In Stock: @item.Quanity</p>
-        </div>
-        <div class="card-footer">
-            
+    @foreach (var item in Model.GetFeatured)
+    {
+        <div class="card" style="width:20em; margin:10px;">
+            <a asp-page="">
+                <img src="~/img/@item.ImgUrl" class="card-img-top" style="width:20rem; height:30rem;">
+            </a>
+
+            <div class="card-body">
+                <h3 class="card-title">@item.Name</h3>
+                <h5 class="card-title">Unit: @item.ProductType</h5>
+                @foreach (var category in item.ProductCategory)
+                {
+                    <h5 class="card-title">Type: @category</h5>
+                }
+                <h5 class="card-text"> Price: @item.Price&euro; (SEK: @(item.Price * 9.5))</h5>
+                <p class="card-text">In Stock: @item.Quanity</p>
+            </div>
+            <div class="card-footer">
+
                 <!-- <a class="btn btn-info" asp-page="">Details</a>-->
                 <p>
                     <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#@item.Name.Replace(" ", "")" aria-expanded="false" aria-controls="collapseExample">
@@ -53,12 +55,12 @@
                     <!--<a class="btn btn-success" asp-page="">Add to Cart</a> -->
                     <button class="btn btn-success" type="submit" asp-route-id="@item.ProductID">Add to Cart</button>
                 </form>
-           
+
+            </div>
+            <div class="card"></div>
         </div>
-        <div class="card"></div>
-        </div>
-        }
-    </div>
+    }
+</div>
 
 
 
