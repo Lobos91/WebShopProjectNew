@@ -24,17 +24,18 @@ namespace WebbshoppenSS.Models
     
     public class MiddleAge : Product
     {
-        
+        public bool HasShield { get; set; }
     }
 
     public class NowAge : Product
     {
+        public bool LandBased { get; set; }
     }
 
 
     public class FutureAge : Product
     {
-
+        public bool Interplanetary { get; set; }
     }
 
 }

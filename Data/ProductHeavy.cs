@@ -24,6 +24,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="SoldierHeavy1.jpg",
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
+                        Interplanetary = false,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
@@ -36,6 +37,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="SoldierHeavy2.jpg",
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
+                        Interplanetary = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
@@ -49,6 +51,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="SoldierHeavy3.jpg",
                         ProductType = ProductType.Infantry,
                         Quanity = 1000,
+                        Interplanetary = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
@@ -61,6 +64,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="VehicleHeavy1.jpg",
                         ProductType = ProductType.Vehilce,
                         Quanity = 20000,
+                        Interplanetary = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
@@ -73,6 +77,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="VehicleHeavy2.jpg",
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
+                        Interplanetary = false,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
@@ -85,6 +90,7 @@ namespace WebbshoppenSS.Data
                         ImgUrl ="VehicleHeavy3.jpg",
                         ProductType = ProductType.Vehilce,
                         Quanity = 1000,
+                        Interplanetary = true,
                         Details = "Light armored begginer level infantry soldier.\\" +
                         "Can be usefull as a support for heavier units becouse of its speed.",
                         ProductCategory = new List<string>(){ "Future units"},
