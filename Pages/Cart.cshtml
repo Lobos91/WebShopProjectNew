@@ -2,8 +2,6 @@
 @model WebbshoppenSS.Pages.CartModel
 @{
     double sum = 0;
-    //int dataCount = 0;
-    double shipping = 0;
     int shippingOne = 29;
     int shippingTwo = 99;
 }
@@ -47,77 +45,129 @@
     }
 </table>
 
-<div class="col-6">
-    <h1>YOUR TOTAL: @sum</h1>
-</div>
 
+<h2 class="text-center">TOTAL PRICE: @sum €</h2>
+<br />
+<h3>Shipping info</h3>
+<br />
 <form method="post">
-
-    <div class="form-check">
-        <label for="validationDefault01" class="form-label">First Name</label>
-        <input type="text" asp-for="@Model.FirstName" class="form-control" value="" required placeholder="First Name">
+    <div class="form-group row">
+        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputName" placeholder="Full name" required>
+        </div>
     </div>
-    <div class="form-check">
-        <label for="validationDefault01" class="form-label">Last Name</label>
-        <input type="text" asp-for="@Model.LastName" class="form-control" value="" required placeholder="Last Name">
+    <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail" placeholder="Email" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputStreet" class="col-sm-2 col-form-label">Street Address</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputStreet" placeholder="Street" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPostal" class="col-sm-2 col-form-label">Postal Code</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputStreet" placeholder="Postal Code" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputCity" placeholder="City" required>
+        </div>
     </div>
 
-    <div class="form-check">
-        <label for="validationDefault01" class="form-label">Postal Code</label>
-        <input type="text" asp-for="@Model.PostalCode" class="form-control" value="" required placeholder="Postal Code">
-    </div>
 
-    <div class="form-check">
-        <label for="validationDefault01" class="form-label">Street Address</label>
-        <input type="text" asp-for="@Model.Street" class="form-control" value="" required placeholder="Street">
-    </div>
-
-    <div class="form-check">
-        <label for="validationDefault01" class="form-label">City</label>
-        <input type="text" asp-for="@Model.City" class="form-control" value="" required placeholder="City">
-    </div>
-    <br />
-    <input type="radio" name="shipping" value="@shippingOne" checked="checked"/>@shippingOne
-    <br />
-
-    <input type="radio" asp-for="Shipping" name="shipping" value="@shippingTwo" />@shippingTwo
-    <br />
+    <fieldset class="form-group">
+        <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Shipping</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input type="radio" name="shipping" value="@shippingOne" checked="checked" />
+                    <label class="form-check-label" for="gridRadios1">
+                        Express Shipping: @shippingOne €
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="shipping" value="@shippingTwo" />
+                    <label class="form-check-label" for="gridRadios2">
+                        Normal Shipping: @shippingTwo €
+                    </label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
 
     <div class="mb-3">
-        <button class="btn btn-primary" type="submit" asp-page-handler="AdressShipping">Accept</button>
+        <button class="btn btn-primary" type="submit" asp-page-handler="AdressShipping">Accept Shipping</button>
+    </div>
+</form>
+<br />
+
+<h3>Price with shipping: @(sum + Model.Shipping) €</h3>
+<h4>Without VAT: @(Math.Round(((sum + Model.Shipping) * 0.8), 2)) €</h4>
+
+
+<br />
+<br />
+<form method="post">
+    <div class="col-4">
+        <div class="row">
+            <h3>Payment Method:</h3>
+        </div>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
+        <label class="form-check-label" for="flexRadioDefault1">
+            CreditCard
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+        <label class="form-check-label" for="flexRadioDefault2">
+            PayPal
+        </label>
+    </div>
+    <br />
+    <div class="mb-3">
+        <button class="btn btn-success btn-lg" type="submit" asp-page-handler="Buy">Place Order</button>
     </div>
 </form>
 
-    <div class="col-6">
-        <div class="row">
-            <h1>Price with shipping: @(sum + Model.Shipping)</h1>
-            <h3>Without VAT: @((sum + Model.Shipping) * 0.8)</h3>
-        </div>
 
+@*Old form shipping info*@
+
+@*    <div class="form-check">
+    <label for="validationDefault01" class="form-label">First Name</label>
+    <input type="text" asp-for="@Model.FirstName" class="form-control" value="" required placeholder="First Name">
     </div>
-    <form method="post">
-        <div class="col-4">
-            <div class="row">
-                <h3>Payment Method:</h3>
-            </div>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-            <label class="form-check-label" for="flexRadioDefault1">
-                CreditCard
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
-                PayPal
-            </label>
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-primary" type="submit" asp-page-handler="Buy">Pay</button>
-        </div>
+    <div class="form-check">
+    <label for="validationDefault01" class="form-label">Last Name</label>
+    <input type="text" asp-for="@Model.LastName" class="form-control" value="" required placeholder="Last Name">
+    </div>
 
-    </form>
+    <div class="form-check">
+    <label for="validationDefault01" class="form-label">Postal Code</label>
+    <input type="text" asp-for="@Model.PostalCode" class="form-control" value="" required placeholder="Postal Code">
+    </div>
 
+    <div class="form-check">
+    <label for="validationDefault01" class="form-label">Street Address</label>
+    <input type="text" asp-for="@Model.Street" class="form-control" value="" required placeholder="Street">
+    </div>
 
+    <div class="form-check">
+    <label for="validationDefault01" class="form-label">City</label>
+    <input type="text" asp-for="@Model.City" class="form-control" value="" required placeholder="City">
+    </div>
+    <br />
+    <input type="radio" name="shipping" value="@shippingOne" checked="checked" />@shippingOne
+    <br />
 
+    <input type="radio" name="shipping" value="@shippingTwo" />@shippingTwo
+    <br />*@
