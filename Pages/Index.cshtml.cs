@@ -37,5 +37,14 @@ namespace WebbshoppenSS.Pages
             GetFeatured = Alla.Where(x => x.Featured == true);
 
         }
+
+        public IActionResult OnPost(int id)
+        {
+
+            ShoppingCart.AddToCart(id);
+
+            return RedirectToPage("/Cart");
+
+        }
     }
 }
